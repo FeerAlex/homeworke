@@ -1,0 +1,7 @@
+{
+  "name": "dz1_alexander",
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "gulp": "^3.9.0"
+  }
+}
