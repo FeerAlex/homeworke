@@ -1,0 +1,355 @@
+@font-face {
+	font-family: FSMedium;
+	src: url(../fonts/firasans-medium.eot);
+	src: url(../fonts/firasans-medium.eot?#iefix) format('embedded-opentype'),
+		 url(../fonts/firasans-medium.woff) format('woff'),
+		 url(../fonts/firasans-medium.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: FSBook;
+	src: url(../fonts/firasans-book.eot);
+	src: url(../fonts/firasans-book.eot?#iefix) format('embedded-opentype'),
+		 url(../fonts/firasans-book.woff) format('woff'),
+		 url(../fonts/firasans-book.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: FSLight;
+	src: url(../fonts/firasans-light.eot);
+	src: url(../fonts/firasans-light.eot?#iefix) format('embedded-opentype'),
+		 url(../fonts/firasans-light.woff) format('woff'),
+		 url(../fonts/firasans-light.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: PNCSemibold;
+	src: url(../fonts/proximanovacond-semibold-webfont.eot);
+	src: url(../fonts/proximanovacond-semibold-webfont.eot?#iefix) format('embedded-opentype'),
+		 url(../fonts/proximanovacond-semibold-webfont.woff) format('woff'),
+		 url(../fonts/proximanovacond-semibold-webfont.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background: url(../img/bg.png) repeat;
+}
+a {text-decoration: none;}
+ul {margin: 0;padding: 0;list-style: none;font-size: 0;}
+h1, h2, h3, h4, h5, h6 {margin: 0;font-weight: normal;}
+p {margin: 0;padding: 0;}
+.clearfix:before, .clearfix:after {content:"";display:table;}
+.clearfix:after {clear:both;}
+.clearfix {zoom:1; /* Хак для IE 6 и 7 */}
+/*----------------Шапка-------------------*/
+.head {
+	background-color: #eff3f7;
+	background-image: -webkit-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: -moz-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: -ms-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: -o-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-size: 100% 3px;
+	background-repeat: no-repeat;
+	background-position: 0px 116px;
+
+	margin-bottom: 39px;
+}
+.head-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	height: 119px;
+}
+.logo {
+	position: absolute;
+	top: 39px;
+}
+.logo-text {display: none;}
+.link-list {
+	position: absolute;
+	right: -12px;top: 35px;
+}
+.link-item {
+	display: inline-block;
+	border-radius: 50%;
+	margin: 0 12px;
+}
+.link-url {
+	background: url(../img/spritesheet.png);
+	display: block;
+	width: 47px;
+	height: 47px;
+}
+.vk {background-position: -5px -119px;}
+.tw {background-position: -119px -5px;}
+.fb {background-position: -5px -5px;}
+.gh {background-position: -5px -62px;}
+.vk:hover {background-position: -61px -119px;}
+.tw:hover {background-position: -119px -62px;}
+.fb:hover {background-position: -62px -5px;}
+.gh:hover {background-position: -62px -62px;}
+
+/*----------------Контент-------------------*/
+.content {
+	width: 960px;
+	margin: 0 auto 39px;
+}
+
+/*-----Сайдбар-----*/
+.sidebar {
+	width: 250px;
+	float: left;
+}
+.menu-box {
+	background: #eff3f7;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.menu-item {
+	border-bottom: 2px solid #3ba8c0;
+	width: 230px;
+	margin: 0 auto;
+}
+.menu-item:last-child {border-color: #eff3f7;}
+
+.menu-link {
+	padding: 20px 0;
+	display: block;
+	padding-left: 17px;
+
+	font-size: 21px;
+	font-family: FSBook;
+	color: #959aa8;
+
+	margin: -2px 0 -2px -10px;
+	width: 233px;
+}
+.menu-link:hover {
+ 	color: #3ba8c0;
+}
+.actived, .actived:hover {
+	background: #3ba8c0;
+	color: #fff;
+	font-size: 23px;
+}
+/*-----Контакты-----*/
+.kontakt-box {
+	margin-top: 23px;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.kontakt-header, .kontakt-link {
+	height: 40px;
+	display: block;
+	line-height: 40px;
+	color: #fff;
+	font-family: FSBook;
+	font-style: normal;
+}
+.kontakt-header {
+	background: #3ba8c0;
+	padding-left: 21px;
+	font-size: 21px;
+}
+.mail {background: #41b9d4 url(../img/pochta.png);}
+.tel {background: #48cbe8 url(../img/telephone.png);}
+.skype {background: #51daf8 url(../img/skype.png);}
+.kontakt-link {
+	font-size: 17px;
+	padding-left: 83px;
+	background-position: 42px;
+	background-repeat: no-repeat;
+}
+.kontakt-link:hover {
+	text-decoration: underline;
+}
+/*---------------Контент-------------------*/
+.about {
+	width: 650px;
+	float: right;
+}
+.about-box {
+	border-radius: 3px;
+	overflow: hidden;
+	background: #eff3f7;
+	margin-top: 26px;
+}
+.first-blok {
+	margin: 0;
+}
+.about-header {
+	height: 67px;
+	line-height: 67px;
+	width: 319px;
+	padding-left: 22px;
+	border-bottom: 2px solid #3ba8c0;
+	color: #3ba8c0;
+	font-size: 27px;
+	font-family: FSBook;
+}
+.detail {
+	width: 192px;
+}
+.about-image {
+	width: 228px;
+	float: left;
+}
+.avatar {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	border: 5px solid #3ba8c0;
+	margin-top: 35px;
+	margin-left: 55px;
+	overflow: hidden;
+}
+.my-face {
+	width: 100%;
+}
+.about-info {
+	width: 422px;
+	float: left;
+	padding-bottom: 41px;
+}
+.about-info-list {
+	margin-top: 17.8px;
+}
+.about-info-item {
+	margin-top: 5.8px;
+}
+.info-question {
+	font-family: FSMedium;
+	font-size: 17px;
+	color: #4a545d;
+	float: left;
+}
+.info-answer {
+	font-family: FSBook;
+	font-size: 15px;
+	color: #4a545d;
+	margin-left: 21px;
+	width: 226px;
+	float:left;
+	margin-top: 2px;
+}
+.skill-last {
+	margin-left: 13px;
+}
+.my-skill {
+	margin-top: 5.8px;
+}
+.skills-item {
+	background: -webkit-linear-gradient(#3ba8c0 50%, #2e8ca2 50%);
+	background: -moz-linear-gradient(#3ba8c0 50%, #2e8ca2 50%);
+	background: -ms-linear-gradient(#3ba8c0 50%, #2e8ca2 50%);
+	background: -o-linear-gradient(#3ba8c0 50%, #2e8ca2 50%);
+	background: linear-gradient(#3ba8c0 50%, #2e8ca2 50%);
+	height: 19px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 2px;
+	padding: 0 13px;
+	font-family: PNCSemibold;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 8px;
+	margin-bottom: 9px;
+	line-height: 19px;
+}
+.info-box {
+	margin-bottom: 38.5px;
+}
+.info-box-item {
+	padding-left: 70px;
+	margin: 20.8px 53.9px 0;
+}
+.work {
+	background: url(../img/work.png) 8px 50% no-repeat;
+}
+.course {
+	background: url(../img/course.png) left 50% no-repeat;
+}
+.list {
+	background: url(../img/list.png) 8px 50% no-repeat;
+}
+.place {
+	font-family: FSBook;
+	font-size: 17px;
+	color: #4a545d;
+}
+.time {
+	font-family: FSLight;
+	font-size: 15px;
+	color: #4a545d;
+	/*margin-top: -5.6px;*/
+}
+
+/*----------------Подвал-------------------*/
+.food {
+	background-color: #eff3f7;
+	background-image: -webkit-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: -moz-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: -ms-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: -o-linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-image: linear-gradient(90deg , #e7eff3, #1e677b, #e7eff3);
+	background-size: 100% 3px;
+	background-repeat: no-repeat;
+}
+
+.food-content {
+	max-width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+.food-block, .food-copy {
+	font-family: FSLight;
+	color: #4a545d;
+}
+.food-block {
+	background: url(../img/lock.png) left 50% no-repeat;
+	height: 32px;
+	position: absolute;
+	top: 26px;
+	line-height: 32px;
+	padding-left: 25px;
+}
+.food-block:hover {
+	background-image: url(../img/unlock.png);
+}
+.food-copy {
+	text-align: center;
+	margin: 0px 200px;
+	padding: 31px 0 28px 0;
+	font-size: 13px;
+}
+
+/* прибьём футер к низу*/
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	min-width: 970px;
+	height: auto !important;
+}
+.wrapper:after {
+	content: "";
+	height: 80px;
+	display: block;
+}
+.food {
+	min-width: 970px;
+	height: 80px;
+	margin-top: -80px;
+}
+
+/* прибьём футер к низу - конец*/
