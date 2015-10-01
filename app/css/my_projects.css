@@ -1,0 +1,115 @@
+.margin-header {
+	margin-bottom: 27px;
+}
+
+
+.project-box {
+	min-height: 840px;
+}
+.project-item {
+	width: 183px;
+	margin: 0 0 39.5px 30px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+.project-item:nth-child(3n+1) {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+/* Анимация начало*/
+.project-img {
+  width: 100%;
+  height: 100%;
+}
+.project-image {
+  margin-bottom: 6.2px;
+  height: 125px;
+  overflow: hidden;
+  border: 2px solid #3ba8c0;
+  border-radius: 4px;
+  position: relative;
+}
+.caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(1,108,164,.75);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  text-align: center;
+
+  -o-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+.project-link-img {
+  padding: 0 4.2px;
+  display: inline-block;
+  color: #eff3f7;
+  border: 2px solid #eff3f7;
+  border-radius: 4px;
+  margin-top: 30%;
+  font-family: FSBook;
+  font-size: 12px;
+
+  -webkit-transform: scale(0.25);
+  -moz-transform: scale(0.25);
+  -ms-transform: scale(0.25);
+  -o-transform: scale(0.25);
+  transform: scale(0.25);
+  -o-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.project-image:hover .caption {
+  opacity: 1;
+}
+.project-image:hover .project-link-img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/* Анимация конец*/
+
+
+
+
+
+
+.project-link {
+	font-family: FSLItalic;
+	font-size: 13px;
+	color: #3ba8c0;
+}
+.project-info {
+	font-size: 15px;
+	color: #4a545d;
+	font-family: FSLight;
+	max-width: 170px;
+	margin: 4.4px auto 0;
+}
+.project-add {
+	background: url(../img/project-img-add.png) 50% 34px no-repeat;
+	display: block;
+	border: 1px dashed #3ba8c0;
+	border-radius: 4px;
+	height: 125px;
+	font-family: FSLight;
+	font-size: 13px;
+	color: #3ba8c0;
+	line-height: 178.8px;
+}

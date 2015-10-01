@@ -29,6 +29,16 @@
 }
 
 @font-face {
+	font-family: FSLItalic;
+	src: url(../fonts/firasans-lightitalic.eot);
+	src: url(../fonts/firasans-lightitalic.eot?#iefix) format('embedded-opentype'),
+		 url(../fonts/firasans-lightitalic.woff) format('woff'),
+		 url(../fonts/firasans-lightitalic.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: PNCSemibold;
 	src: url(../fonts/proximanovacond-semibold-webfont.eot);
 	src: url(../fonts/proximanovacond-semibold-webfont.eot?#iefix) format('embedded-opentype'),
@@ -103,7 +113,7 @@ p {margin: 0;padding: 0;}
 /*----------------Контент-------------------*/
 .content {
 	width: 960px;
-	margin: 0 auto 39px;
+	margin: 0 auto 13px;
 }
 
 /*-----Сайдбар-----*/
@@ -183,23 +193,20 @@ p {margin: 0;padding: 0;}
 	border-radius: 3px;
 	overflow: hidden;
 	background: #eff3f7;
-	margin-top: 26px;
+	margin-bottom: 26px;
 }
 .first-blok {
 	margin: 0;
 }
 .about-header {
-	height: 67px;
-	line-height: 67px;
-	width: 319px;
-	padding-left: 22px;
+	padding: 12px 22px;
+	/*width: 319px;*/
+	/*min-width: 200px;*/
 	border-bottom: 2px solid #3ba8c0;
 	color: #3ba8c0;
 	font-size: 27px;
 	font-family: FSBook;
-}
-.detail {
-	width: 192px;
+	display: inline-block;
 }
 .about-image {
 	width: 228px;

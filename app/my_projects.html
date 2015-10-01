@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home page</title>
+	<title>My projects</title>
 	<!-- SEO -->
 	<meta name="description" content="loftschool_homework">
 	<meta name="keywords" content="loftschool_homework">
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/about-me.css">
+	<link rel="stylesheet" href="css/my_projects.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -63,10 +63,10 @@
 				<nav class="menu-box">
 					<ul class="menu-list">
 						<li class="menu-item">
-							<a href="index.html" class="menu-link actived">Обо мне</a>
+							<a href="" class="menu-link">Обо мне</a>
 						</li>
 						<li class="menu-item">
-							<a href="my_projects.html" class="menu-link">Мои работы</a>
+							<a href="index.html" class="menu-link actived">Мои работы</a>
 						</li>
 						<li class="menu-item">
 							<a href="contact-with-me.html" class="menu-link">Связаться со мной</a>
@@ -92,78 +92,56 @@
 
 			<!-- Контент -->
 			<section class="about">
-				<article class="about-box">
-					<h2 class="about-header">Основная информация</h2>
-					<div class="about-content clear-fix">
-
-						<div class="about-image">
-							<div class="avatar">
-								<img src="img/me.jpg" alt="me" class="my-face">
-							</div>
-						</div>
-
-						<div class="about-info">
-							<ul class="about-info-list">
-								<li class="about-info-item clearfix">
-									<div class="info-question">Меня зовут:</div>
-									<div class="info-answer">Феер Александр Владимирович</div>
-								</li>
-								<li class="about-info-item clearfix">
-									<div class="info-question">Мой возраст:</div>
-									<div class="info-answer">20 лет</div>
-								</li>
-								<li class="about-info-item clearfix">
-									<div class="info-question">Мой город:</div>
-									<div class="info-answer">Чебоксары, Россия</div>
-								</li>
-								<li class="about-info-item clearfix">
-									<div class="info-question">Моя специализация:</div>
-									<div class="info-answer">FRONTEND-разработчик</div>
-								</li>
-								<li class="about-info-item clearfix">
-									<div class="info-question">Ключевые навыки:</div>
-									<div class="info-answer skill-last">
-										<ul class="skills-list my-skill">
-											<li class="skills-item">html</li>
-											<li class="skills-item">CSS</li>
-											<li class="skills-item">javascript</li>
-											<li class="skills-item">gulp</li>
-											<li class="skills-item">git</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</div>
+				<article class="about-box project-box">
+					<h2 class="about-header margin-header">Мои работы</h2>
+					<div class="projects-content">
+						<ul class="project-list">
+							<li class="project-item">
+								<div class="project-image">
+								  	<img src="img/project1.jpg" alt="Effect #3" class="project-img"/>
+								  	<div class="caption">
+								    	<a class="project-link-img" href="#" title="View More" class="project-link">название</a>
+								  	</div>
+								</div>
+								<a href="#" class="project-link">www.site.ru</a>
+								<p class="project-info">Информация о проекте 1 превью 2 строки ...</p>
+							</li>
+							<li class="project-item">
+								<div class="project-image">
+								  	<img src="img/project2.jpg" alt="Effect #3" class="project-img"/>
+								  	<div class="caption">
+								    	<a class="project-link-img" href="#" title="View More" >название</a>
+								  	</div>
+								</div>
+								<a href="#" class="project-link">www.site.ru</a>
+								<p class="project-info">Информация о проекте 1 превью 2 строки ...</p>
+							</li>
+							<li class="project-item">
+								<div class="project-image">
+								  	<img src="img/project3.jpg" alt="Effect #3" class="project-img"/>
+								  	<div class="caption">
+								    	<a class="project-link-img" href="#" title="View More" class="project-link">название</a>
+								  	</div>
+								</div>
+								<a href="#" class="project-link">www.site.ru</a>
+								<p class="project-info">Информация о проекте 1 превью 2 строки ...</p>
+							</li>
+							<li class="project-item">
+								<div class="project-image">
+								  	<img src="img/project4.jpg" alt="Effect #3" class="project-img"/>
+								  	<div class="caption">
+								    	<a class="project-link-img" href="#" title="View More" class="project-link">название</a>
+								  	</div>
+								</div>
+								<a href="#" class="project-link">www.site.ru</a>
+								<p class="project-info">Информация о проекте 1 превью 2 строки ...</p>
+							</li>
+							<li class="project-item">
+								<a href="" class="project-add">Добавить проект</a>
+							</li>
+						</ul>
+						
 					</div>
-				</article>
-
-
-				<article class="about-box">
-					<h2 class="about-header">Опыт работы</h2>
-					<ul class="info-box">
-						<li class="info-box-item work">
-							<p class="place">"ИП Боровицкий" - Продавец дисков</p>
-							<p class="time">Сентябрь 2005 - Август 2008</p>
-						</li>
-						<li class="info-box-item work">
-							<p class="place">"ИП Боровицкий" - Продавец дисков</p>
-							<p class="time">Сентябрь 2005 - Август 2008</p>
-						</li>
-					</ul>
-				</article>
-
-				<article class="about-box">
-					<h2 class="about-header">Образование</h2>
-					<ul class="info-box">
-						<li class="info-box-item course">
-							<p class="place">Незаконченное высшее. ЧГУ им. И. Н. Ульянова</p>
-							<p class="time">Сентябрь 2013 - по настоящее время</p>
-						</li>
-						<li class="info-box-item list">
-							<p class="place">Курсы Loftschool.ru</p>
-							<p class="time">Сентябрь 2015 - по настоящее время</p>
-						</li>
-					</ul>
 				</article>
 
 			</section>
