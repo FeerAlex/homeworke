@@ -1,4 +1,14 @@
 @font-face {
+	font-family: FSRegular;
+	src: url(../fonts/firasans-regular.eot);
+	src: url(../fonts/firasans-regular.eot?#iefix) format('embedded-opentype'),
+		 url(../fonts/firasans-regular.woff) format('woff'),
+		 url(../fonts/firasans-regular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: FSMedium;
 	src: url(../fonts/firasans-medium.eot);
 	src: url(../fonts/firasans-medium.eot?#iefix) format('embedded-opentype'),
@@ -352,16 +362,16 @@ p {margin: 0;padding: 0;}
 	min-height: 100%;
 	min-width: 970px;
 	height: auto !important;
-	display: flex;
+	/*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
 }
-.wrapper:before {
+/*.wrapper:before {
     height: 100%;
     display: inline-block;
     vertical-align: middle;
     content: '';
-}
+}*/
 .wrapper:after {
 	content: "";
 	height: 80px;

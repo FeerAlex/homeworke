@@ -1,0 +1,133 @@
+.addproject-block {
+	width: 362px;
+	background: #eff3f7;
+
+	margin: 50px auto 0;
+	border-radius: 3px;
+	overflow: hidden;
+
+	-webkit-box-shadow: 0 6px 12px 1px rgba(13,16,7,.35);
+	-moz-box-shadow: 0 6px 12px 1px rgba(13,16,7,.35);
+	box-shadow: 0 6px 12px 1px rgba(13,16,7,.35);
+
+	display: none;
+}
+
+.addproject-header {
+	padding: 2.6px 0 2.6px 13px;
+	background: #48cbe8;
+	border-bottom: 9px solid #67dffa;
+	font-family: FSRegular;
+	font-size: 25px;
+	color: #fff;
+	margin-bottom: 7.2px;
+}
+.addproject-form {
+	width: 320px;
+	margin: 0 auto 21px;
+}
+
+.addproject-label {
+	font-family: FSBook;
+	font-size: 17px;
+	color: #959aa8;
+	min-width: 320px;
+	display: inline-block;
+	margin-bottom: 7.2px;
+}
+.addproject-input {
+	width: 318px;
+	height: 39px;
+	text-indent: 9px;
+	border: 1px solid #48cbe8;
+	border-radius: 2px;
+	font-family: FSLight;
+	font-size: 13px;
+	color: #48cbe8;
+	outline: none;
+	padding: 0;
+	resize: none;
+}
+.addproject-input::-webkit-input-placeholder {color: #48cbe8;}
+.addproject-input:-moz-placeholder {color: #48cbe8;}
+
+/* Фон поля для добавления файла */
+.fileform { 
+	background: #fff;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 318px;
+	height: 39px;
+	text-indent: 9px;
+	border: 1px solid #48cbe8;
+	border-radius: 2px;
+	font-family: FSLight;
+	font-size: 13px;
+	color: #48cbe8;
+	outline: none;
+}
+ 
+/* Кнопка для добавления файла*/
+.fileform .selectbutton { 
+    background: #48cbe8 url(../img/add-project.png) 50% no-repeat;
+    float: right;
+    height: 39px;
+    width: 51px;
+}
+
+/* Поле добавления файла */
+.fileform .upload{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    -moz-opacity: 0; 
+    filter: alpha(opacity=0); 
+    opacity: 0; 
+    font-size: 150px; 
+    height: 39px; 
+    z-index:20;
+}
+
+/* Текст с путём к файлу */
+.fileform .fileformlabel { 
+	float: left;
+	height: 39px;
+	line-height: 39px;
+	overflow: hidden;
+	width:260px;
+}
+
+/* Текст */
+.add-textarea {
+	height: 101px;
+	padding: 8px 0 0 0;
+	margin: 0;
+}
+
+/* Кнопка добавления проекта */
+.button_login {
+	font-family: FSBook;
+	font-size: 19px;
+	color: #fff;
+	background: #48cbe8;
+	padding: 0.2px 28px;
+	display: block;
+	position: relative;
+	border-radius: 4px;
+	box-shadow: 0 4px #3ba8c0;
+	border: none;
+	outline: none;
+	margin: 0 auto;
+}
+
+.button_login:hover {
+	box-shadow: 0 3px #3ba8c0;
+	top: 1px;
+}
+
+.button_login:active {
+	box-shadow: 0 0 #3ba8c0;
+	top: 4px;
+}

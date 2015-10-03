@@ -17,6 +17,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/my_projects.css">
+	<link rel="stylesheet" href="css/addproject.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -63,10 +64,10 @@
 				<nav class="menu-box">
 					<ul class="menu-list">
 						<li class="menu-item">
-							<a href="" class="menu-link">Обо мне</a>
+							<a href="index.html" class="menu-link">Обо мне</a>
 						</li>
 						<li class="menu-item">
-							<a href="index.html" class="menu-link actived">Мои работы</a>
+							<a href="my_projects.html" class="menu-link actived">Мои работы</a>
 						</li>
 						<li class="menu-item">
 							<a href="contact-with-me.html" class="menu-link">Связаться со мной</a>
@@ -137,10 +138,45 @@
 								<p class="project-info">Информация о проекте 1 превью 2 строки ...</p>
 							</li>
 							<li class="project-item">
-								<a href="" class="project-add">Добавить проект</a>
+								<a href="" class="project-add" id="my-button">Добавить проект</a>
 							</li>
 						</ul>
 						
+					</div>
+				</article>
+
+				<article class="addproject-block" id="addproject-block">
+					<h2 class="addproject-header">Добавление проекта</h2>
+					<div class="addproject-box">
+						<form action="" class="addproject-form" method="">
+
+
+
+							<label class="addproject-label">Название проекта
+								<input type="text" class="addproject-input" placeholder="Введите название">
+							</label>
+
+							<label class="addproject-label">Картинка проекта
+								<div class="fileform">
+									<div id="fileformlabel" class="fileformlabel">Загрузите изображение</div>
+									<div class="selectbutton"></div>
+									<input type="file" class="upload" id="upload" onchange="getName(this.value);" />
+								</div>
+							</label>
+
+							<label class="addproject-label">URL проекта
+								<input type="text" class="addproject-input" placeholder="Добавьте ссылку ">
+							</label>
+							
+							<label class="addproject-label">Описание
+								<textarea class="addproject-input add-textarea" placeholder="Пара слов о вашем проекте"></textarea>
+							</label>
+
+							<input type="submit" value="Добавить" class="button_login">
+
+
+
+						</form>
 					</div>
 				</article>
 
@@ -158,6 +194,7 @@
 	</footer>
 
 	<script src="bower/jquery/dist/jquery.js"></script>
+	<script src="bower/bPopup/jquery.bpopup.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
