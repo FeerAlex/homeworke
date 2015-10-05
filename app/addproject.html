@@ -17,6 +17,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/addproject.css">
+	<link rel="stylesheet" href="css/style_form.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -26,44 +27,47 @@
 	Пожалуйста <a href="http://browsehappy.com/">обновите</a> его</p>
 	<![endif]-->
 
-				<article class="addproject-block">
-					<h2 class="addproject-header">Добавление проекта</h2>
-					<div class="addproject-box">
-						<form action="" class="addproject-form" method="">
+<article class="addproject-block">
+	<h2 class="addproject-header">Добавление проекта</h2>
+	<div class="addproject-box">
+		<form action="" class="addproject-form" method="">
+
+			<!-- <div id="comment_bubble">fff</div> -->
+			
+			<div class="m_ipt">
+				<label class="lbl lbl_addproject">Название проекта</label>
+				<input name="project_name" id="project_name" class="ipt ipt_addproject" type="text" placeholder="Введите название">
+			</div>			
+
+			<div class="m_ipt">
+				<label class="lbl lbl_addproject">Картинка проекта</label>
+				<div class="ipt ipt_addproject">
+					<div id="fileformlabel" class="fileformlabel">Загрузите изображение</div>
+					<div class="selectbutton"></div>
+					<input name="project_picture" id="project_picture" class="upload" type="file">
+				</div>
+			</div>
+
+			<div class="m_ipt">
+				<label class="lbl lbl_addproject">URL проекта</label>
+				<input name="project_url" id="project_url" class="ipt ipt_addproject" type="text" placeholder="Добавьте ссылку ">
+			</div>	
+
+			<div class="m_ipt_addproject">	
+				<label class="lbl lbl_addproject">Описание</label>
+				<textarea name="project_info" id="project_info" class="txra txra_addproject" placeholder="Пара слов о вашем проекте"></textarea>
+			</div>
+
+			<input name="project_submit" id="button_submit_succesful" class="btn btn_addproject" type="submit" value="Добавить">
 
 
 
-							<label class="addproject-label">Название проекта
-								<input type="text" class="addproject-input" placeholder="Введите название">
-							</label>
-
-							<label class="addproject-label">Картинка проекта
-								<!-- <input type="file" class="addproject-input" placeholder="Введите название"> -->
-								<div class="fileform">
-									<div id="fileformlabel" class="fileformlabel">Загрузите изображение</div>
-									<div class="selectbutton"></div>
-									<input type="file" class="upload" id="upload" onchange="getName(this.value);" />
-								</div>
-							</label>
-
-							<label class="addproject-label">URL проекта
-								<input type="text" class="addproject-input" placeholder="Добавьте ссылку ">
-							</label>
-							
-							<label class="addproject-label">Описание
-								<textarea class="addproject-input add-textarea" placeholder="Пара слов о вашем проекте"></textarea>
-							</label>
-
-							<input type="submit" value="Добавить" class="button_login">
-
-
-
-						</form>
-					</div>
-				</article>
+		</form>
+	</div>
+</article>
 
 	<script src="bower/jquery/dist/jquery.js"></script>
-	<script></script>
+	<script src="bower/bPopup/jquery.bpopup.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

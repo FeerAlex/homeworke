@@ -1,0 +1,84 @@
+/* LABEL */
+.lbl {
+	font-family: FSBook;
+	font-size: 19px;
+	color: #959aa8;
+	display: block;
+}
+
+/* INPUT */
+.ipt {
+	border: 1px solid #48cbe8;
+	border-radius: 2px;
+	text-indent: 9px;
+	font-family: FSLight;
+	font-size: 13px;
+	color: #48cbe8;
+	outline: none;
+}
+.ipt::-webkit-input-placeholder {color: #48cbe8;}
+.ipt:-moz-placeholder {color: #48cbe8;}
+
+.m_ipt {margin-bottom: 9px;}
+
+/* TEXTAREA */
+.txra {
+	padding: 5px 0 0 0;
+	text-indent: 9px;
+	border: 1px solid #48cbe8;
+	border-radius: 2px;
+	font-family: FSLight;
+	font-size: 13px;
+	color: #48cbe8;
+	outline: none;
+	resize: none;
+	overflow: auto;
+}
+.txra::-webkit-input-placeholder {color: #48cbe8;}
+.txra:-moz-placeholder {color: #48cbe8;}
+
+/* BUTTONS */
+.btn {
+	font-family: FSBook;
+	font-size: 19px;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	position: relative;
+	background: #48cbe8;
+	box-shadow: 0 3px 0 0 #3ba8c0;
+	padding: 0.2px 21px;
+}
+.btn:hover {box-shadow: 0 2px #3ba8c0;background: #44bfdb;top: 1px;}
+.btn:active {box-shadow: none;background: #48cbe8;top: 3px;}
+
+/* Для формы связи со мной     !начало! */
+.img_code {width: 189px;height: 77px;border: 1px solid #48cbe8;border-radius: 2px;background-color: #fff;margin-bottom: 21px;}
+.code {height: 30px;margin-top: 20px;}
+.ipt_contact {width: 190px;height: 39px;}
+.txra_contact {width: 392px;height: 176px;}
+.clear {background: #849db5;box-shadow: 0 3px 0 0 #687b8f;}
+.clear:hover {box-shadow: 0 2px #687b8f;background: #7b92a8;}
+.clear:active {box-shadow: none;background: #849db5;}
+/* Для формы связи со мной     !конец! */
+
+/* Для формы логина     !начало! */
+.lbl_login {font-family: FSLight;font-size: 36px;}
+.ipt_login {width: 422px;height: 60px;text-indent: 19px;font-size: 17px;}
+.m_ipt_login {margin-bottom: 10.8px;}
+.m_ipt_password {margin-bottom: 23.2px;}
+.btn_login {font-size: 36px;height: 50px;padding: 0 62px;}
+/* Для формы логина     !конец! */
+
+/* Для формы добавления проекта     !начало! */
+.lbl_addproject {font-size: 17px;}
+.ipt_addproject {width: 318px;height: 39px;}
+.txra_addproject {width: 318px;height: 101px;}
+.m_ipt_addproject {margin-bottom: 11.2px;}
+.btn_addproject {padding: 0.2px 28px;margin-left: 28%;}
+.ipt_addproject { background: #fff;width: 318px;height: 39px;}
+.selectbutton { background: #48cbe8 url(../img/add-project.png) 50% no-repeat;float: right;height: 39px;width: 51px;}
+.upload{position:absolute; top:0; left:0;width:100%;-moz-opacity: 0;filter: alpha(opacity=0);opacity: 0;font-size: 150px;height: 39px;z-index:20;}
+.fileformlabel { float: left;height: 39px;line-height: 39px;overflow: hidden;width:260px;}
+/* Для формы добавления проекта     !конец! */

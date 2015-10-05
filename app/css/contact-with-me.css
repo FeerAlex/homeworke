@@ -1,7 +1,3 @@
-.form-box {
-	min-height: 702px;
-}
-
 .form-header {
 	padding: 39.5px 0px 39.5px 62px;
 	background: #48cbe8;
@@ -12,88 +8,7 @@
 	margin-bottom: 42px;
 }
 .contact-form {
-	margin-left: 124px;
 	width: 403px;
+	margin: 0 auto;
+	padding-bottom: 70px;
 }
-
-.label_name {
-	font-family: FSBook;
-	font-size: 19px;
-	color: #959aa8;
-	width: 192px;
-	margin-bottom: 9px;
-}
-.mb {
-	margin-bottom: 20px;
-	height: 20px;
-}
-.input_name {
-	width: 190px;
-	height: 39px;
-	text-indent: 9px;
-	border: 1px solid #48cbe8;
-	border-radius: 2px;
-	font-family: FSLight;
-	font-size: 13px;
-	color: #48cbe8;
-	outline: none;
-}
-.textarea {
-	width: 392px;
-	height: 177px;
-	padding: 4px 0 0 0;
-	text-indent: 9px;
-	border: 1px solid #48cbe8;
-	border-radius: 2px;
-	font-family: FSLight;
-	font-size: 13px;
-	color: #48cbe8;
-	outline: none;
-	resize: none;
-	overflow: auto;
-}
-.textarea::-webkit-input-placeholder {color: #48cbe8;}
-.textarea:-moz-placeholder {color: #48cbe8;}
-.input_name::-webkit-input-placeholder {color: #48cbe8;}
-.input_name:-moz-placeholder {color: #48cbe8;}
-
-.img_code {
-	width: 189px;
-	height: 77px;
-	border: 1px solid #48cbe8;
-	border-radius: 2px;
-	background-color: #fff;
-	margin-bottom: 21px;
-}
-.code {
-	height: 30px;
-	margin-top: 20px;
-}
-
-/* Общие стили для кнопок */
-.input_button {
-	width: 137px;
-	height: 30px;
-	padding: 0;
-	border: none;
-	font-family: FSBook;
-	font-size: 19px;
-	color: #fff;
-	outline: none;
-	border-radius: 4px;
-	margin-bottom: 33px;
-}
-.send {background: #48cbe8;box-shadow: 0 1px 0 0 #44bfdb, 0 3px 0 0 #3ba8c0;}
-.clear {background: #849db5;box-shadow: 0 1px 0 0 #7b92a8, 0 3px 0 0 #687b8f;}
-.input_button:hover {
-	height: 33px;
-	box-shadow: none;
-	margin-bottom: 0;
-}
-.input_button:active {
-	margin-top: 3px;
-	height: 30px;
-	margin-bottom: 0px;
-}
-.send:active {box-shadow: 0 -1px 0 0 #44bfdb, 0 -3px 0 0 #3ba8c0;}
-.clear:active {box-shadow: 0 -1px 0 0 #7b92a8, 0 -3px 0 0 #687b8f;}

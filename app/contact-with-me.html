@@ -17,6 +17,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/contact-with-me.css">
+	<link rel="stylesheet" href="css/style_form.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -31,7 +32,7 @@
 		<header class="head">
 			<div class="head-content">
 
-				<a href="http://www.loftschool.com" class="logo-link" target="_blank">
+				<a href="index.html" class="logo-link">
 					<img src="img/logo.png" alt="logo" class="logo">
 					<span class="logo-text">Сайт портфолио</span>
 				</a>
@@ -97,31 +98,32 @@
 					<div class="form-box">
 						<form action="" class="contact-form" method="">
 
-							<div class="buttons clearfix">
-								<label for="" class="label_name left">Имя
-									<input type="text" class="input_name" placeholder="Как к вам обращаться">
-								</label>
+							<!-- <div class="clearfix"> -->
+							<div class="m_ipt my_name left">
+								<label for="my_name" class="lbl">Имя</label>
+								<input name="my_name" id="my_name" type="text" class="ipt ipt_contact" placeholder="Как к вам обращаться">
+							</div>	
 
-								<label for="" class="label_name right">Email
-									<input type="text" class="input_name" placeholder="Куда мне писать">
-								</label>
+							<div class="m_ipt my_email right">
+								<label for="my_email" class="lbl">Email</label>
+								<input name="my_email" id="my_email" type="text" class="ipt ipt_contact" placeholder="Куда мне писать">
+							</div>
+							<!-- </div> -->
+						
+							<div class="m_ipt message left">
+								<label for="" class="lbl">Сообщение</label>
+								<textarea name="my_message" id="my_message" class="txra txra_contact" placeholder="Кратко в чём суть"></textarea>
 							</div>
 
-							<label for="" class="label_name">Сообщение
-								<textarea name="" id="" class="textarea" placeholder="Кратко в чём суть"></textarea>
-							</label>
 
-
-							<div class="buttons clearfix">
-								<label for="" class="label_name ">Введите код, указанный на картинке</label>
-								<img src="img/code.jpg" alt="picha" class="img_code left">
-								<input type="text" class="input_name code right" placeholder="Введите код">
+							<div class="m_ipt pikcha clearfix">
+								<label for="" class="lbl">Введите код, указанный на картинке</label>
+								<img src="img/code.jpg" alt="pikcha" class="img_code left">
+								<input type="text" class="ipt ipt_contact code right" placeholder="Введите код">
 							</div>
 
-							<div class="buttons clearfix">
-								<input type="submit" value="Отправить" class="input_button send left">
-								<input type="reset" value="Отчистить" class="input_button clear right">
-							</div>
+							<input type="submit" value="Отправить" class="btn btn_contact send left">
+							<input type="reset" value="Отчистить" class="btn btn_contact clear right">
 							
 						</form>
 					</div>
@@ -141,6 +143,6 @@
 	</footer>
 
 	<script src="bower/jquery/dist/jquery.js"></script>
-	<script src="js/main.js"></script>
+	<!--<script src="js/main.js"></script>-->
 </body>
 </html>

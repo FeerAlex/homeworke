@@ -362,16 +362,8 @@ p {margin: 0;padding: 0;}
 	min-height: 100%;
 	min-width: 970px;
 	height: auto !important;
-	/*display: flex;
-    align-items: center;
-    justify-content: center;*/
+	word-wrap: break-word;
 }
-/*.wrapper:before {
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    content: '';
-}*/
 .wrapper:after {
 	content: "";
 	height: 80px;

@@ -17,6 +17,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/style_form.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -28,26 +29,26 @@
 
 	<div class="wrapper">
 
-				<main class="about-box login">
-					<h2 class="form-login-header">Авторизируйтесь</h2>
-					<div class="form-login">
-						<form action="" class="login_form" method="">
+		<main class="about-box login">
+			<h2 class="form-login-header">Авторизируйтесь</h2>
+			<div class="form-login">
+				<form action="" class="login_form" method="">
 
-							<div class="inputs">
-								<label class="label_login">Логин
-									<input type="text" class="input_login" placeholder="Как к вам обращаться">
-								</label>
-
-								<label class="label_login">Пароль
-									<input type="text" class="input_login" placeholder="Как к вам обращаться">
-								</label>
-							</div>
-
-							<input type="submit" value="Войти" class="button_login">
-							
-						</form>
+					<div class="m_ipt_login">
+						<label class="lbl lbl_login">Логин</label>
+						<input type="text" class="ipt ipt_login" placeholder="Введите логин">
 					</div>
-				</main>
+							
+					<div class="m_ipt_password">
+						<label class="lbl lbl_login">Пароль</label>
+						<input type="password" class="ipt ipt_login" placeholder="Введите пароль">
+					</div>
+							
+					<input type="submit" value="Войти" class="btn btn_login">
+							
+				</form>
+			</div>
+		</main>
 
 	</div>
 
@@ -59,6 +60,6 @@
 	</footer>
 
 	<script src="bower/jquery/dist/jquery.js"></script>
-	<script src="js/main.js"></script>
+	<!--<script src="js/main.js"></script>-->
 </body>
 </html>
