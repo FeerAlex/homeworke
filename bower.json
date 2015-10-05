@@ -1,6 +1,7 @@
 {
   "name": "dz1_alexander",
   "dependencies": {
+    "bPopup": "bpopup#~0.11.0",
     "jquery": "~2.1.4",
     "modernizer": "~2.8.2",
     "normalize-css": "normalize.css#~3.0.3"
