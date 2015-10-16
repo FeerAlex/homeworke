@@ -15,6 +15,7 @@
 	font-size: 13px;
 	color: #48cbe8;
 	outline: none;
+	background: #fff;
 }
 .ipt::-webkit-input-placeholder {color: #48cbe8;}
 .ipt:-moz-placeholder {color: #48cbe8;}
@@ -73,12 +74,33 @@
 
 /* Для формы добавления проекта     !начало! */
 .lbl_addproject {font-size: 17px;}
-.ipt_addproject {width: 318px;height: 39px;}
 .txra_addproject {width: 318px;height: 101px;}
 .m_ipt_addproject {margin-bottom: 11.2px;}
 .btn_addproject {padding: 0.2px 28px;margin-left: 28%;}
-.ipt_addproject { background: #fff;width: 318px;height: 39px;}
-.selectbutton { background: #48cbe8 url(../img/add-project.png) 50% no-repeat;float: right;height: 39px;width: 51px;}
-.upload{position:absolute; top:0; left:0;width:100%;-moz-opacity: 0;filter: alpha(opacity=0);opacity: 0;font-size: 150px;height: 39px;z-index:20;}
-.fileformlabel { float: left;height: 39px;line-height: 39px;overflow: hidden;width:260px;}
+.ipt_addproject {width: 318px;height: 39px;position: relative;}
+.selectbutton {position:absolute;right: 0;background: #48cbe8 url(../img/add-project.png) 50% no-repeat;height: 39px;width: 51px;}
+.upload {position:absolute; top:0; left:0;width:100%;height: 39px;z-index:20;-moz-opacity: 0;filter: alpha(opacity=0);opacity: 0;}
+.fileformlabel {position:absolute;left: -1px;top: -1px;height: 37px;line-height: 37px;overflow: hidden;width: 318px;}
 /* Для формы добавления проекта     !конец! */
+
+
+/* SUCCESS AND ERROR */
+.server-mes {
+	width: 316px;
+	height: 59px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	display: none;
+}
+
+.error-mes {
+	background-color: rgba(249,126,118,.33);
+	border: 1px solid #f97e76;
+}
+
+.success-mes {
+	background-color: rgba(73,187,123,.33);
+	border: 1px solid #49bb7b;
+}

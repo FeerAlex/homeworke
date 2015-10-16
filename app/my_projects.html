@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
@@ -14,6 +14,7 @@
 	<link rel="icon" href="favicon-16x16.png" type="image/x-icon">
 	<!-- bower CSS -->
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/my_projects.css">
@@ -148,33 +149,38 @@
 
 				<article class="addproject-block" id="addproject-block">
 					<h2 class="addproject-header">Добавление проекта</h2>
+					<button type="button" class="b-close"></button>
 					<div class="addproject-box">
-						<form action="" class="addproject-form" method="">
-
+						<form action="" class="addproject-form" method="POST" id="form_add_project">
+							
+							<div class="server-mes error-mes"></div>
+							<div class="server-mes success-mes"></div>
 
 
 							<div class="m_ipt">
 								<label class="lbl lbl_addproject">Название проекта</label>
-								<input name="project_name" id="project_name" class="ipt ipt_addproject" type="text" placeholder="Введите название">
-							</div>			
+								<input name="project_name" qtip-content="Введите название проекта" id="project_name" class="ipt ipt_addproject" type="text" placeholder="Введите название">
+							</div>
+
 
 							<div class="m_ipt">
 								<label class="lbl lbl_addproject">Картинка проекта</label>
 								<div class="ipt ipt_addproject">
-									<div id="fileformlabel" class="fileformlabel">Загрузите изображение</div>
+									<input type="text" id="fileformlabel" class="ipt fileformlabel" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали картинку">
 									<div class="selectbutton"></div>
 									<input name="project_picture" id="project_picture" class="upload" type="file">
 								</div>
 							</div>
+							
 
 							<div class="m_ipt">
 								<label class="lbl lbl_addproject">URL проекта</label>
-								<input name="project_url" id="project_url" class="ipt ipt_addproject" type="text" placeholder="Добавьте ссылку ">
+								<input name="project_url" id="project_url" qtip-content="Укажите url!" class="ipt ipt_addproject" type="text" placeholder="Добавьте ссылку ">
 							</div>	
 
 							<div class="m_ipt_addproject">	
 								<label class="lbl lbl_addproject">Описание</label>
-								<textarea name="project_info" id="project_info" class="txra txra_addproject" placeholder="Пара слов о вашем проекте"></textarea>
+								<textarea name="project_info" id="project_info" qtip-content="Добавьте описание!" class="txra txra_addproject" placeholder="Пара слов о вашем проекте"></textarea>
 							</div>
 
 							<input name="project_submit" id="button_submit_succesful" class="btn btn_addproject" type="submit" value="Добавить">
@@ -198,8 +204,15 @@
 		</div>
 	</footer>
 
-	<script src="bower/jquery/dist/jquery.js"></script>
-	<script src="bower/bPopup/jquery.bpopup.js"></script>
-	<script src="js/main.js"></script>
+	<script src="bower/jquery/jquery.js"></script> 									<!-- // jquery              -->
+	<script src="bower/bPopup/jquery.bpopup.js"></script>							<!-- // плагин попапа       -->
+	<script src="bower/placeholder.js/js/jquery.placeholder.js"></script>			<!-- // плагин placeholder  -->
+
+	<script src="bower/qtip2/jquery.qtip.js"></script>
+	<script src="js/validate.js"></script>
+	<script src="js/addProject.js"></script> 										
+	<script src="js/main.js"></script>   											<!-- // мой js              -->
+	<!--<script>$('input[placeholder], textarea[placeholder]').placeholder();</script> // placeholder init    -->
+	<script>$('input[placeholder], textarea[placeholder]').placeholder;</script>
 </body>
 </html>

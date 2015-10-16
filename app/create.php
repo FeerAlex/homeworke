@@ -1,0 +1,3 @@
+<?php 
+	CREATE DATABASE user
+ ?>

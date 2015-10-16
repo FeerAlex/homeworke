@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
@@ -14,6 +14,7 @@
 	<link rel="icon" href="favicon-16x16.png" type="image/x-icon">
 	<!-- bower CSS -->
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/login.css">
@@ -32,16 +33,16 @@
 		<main class="about-box login">
 			<h2 class="form-login-header">Авторизируйтесь</h2>
 			<div class="form-login">
-				<form action="" class="login_form" method="">
+				<form action="" class="login_form" method="" id="loginMe">
 
 					<div class="m_ipt_login">
 						<label class="lbl lbl_login">Логин</label>
-						<input type="text" class="ipt ipt_login" placeholder="Введите логин">
+						<input name="myLogin" type="text" qtip-content="Введите логин!" class="ipt ipt_login" placeholder="Введите логин">
 					</div>
 							
 					<div class="m_ipt_password">
 						<label class="lbl lbl_login">Пароль</label>
-						<input type="password" class="ipt ipt_login" placeholder="Введите пароль">
+						<input name="myPassword" type="password" qtip-content="Введите пароль!" class="ipt ipt_login" placeholder="Введите пароль">
 					</div>
 							
 					<input type="submit" value="Войти" class="btn btn_login">
@@ -59,7 +60,12 @@
 		</div>
 	</footer>
 
-	<script src="bower/jquery/dist/jquery.js"></script>
-	<!--<script src="js/main.js"></script>-->
+	<script src="bower/jquery/jquery.js"></script>
+	<script src="bower/placeholder.js/js/jquery.placeholder.js"></script>
+	<script src="bower/qtip2/jquery.qtip.js"></script>
+	<script src="js/validate.js"></script>
+	<script src="js/login.js"></script>
+	<!--<script>$('input[placeholder], textarea[placeholder]').placeholder();</script>-->
+	<script>$('input[placeholder], textarea[placeholder]').placeholder;</script>
 </body>
 </html>

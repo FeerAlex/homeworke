@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
@@ -14,6 +14,7 @@
 	<link rel="icon" href="favicon-16x16.png" type="image/x-icon">
 	<!-- bower CSS -->
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/contact-with-me.css">
@@ -96,30 +97,30 @@
 				<article class="about-box">
 					<h2 class="form-header">У вас интересный проект? Напишите мне</h2>
 					<div class="form-box">
-						<form action="" class="contact-form" method="">
+						<form action="" class="contact-form" method="" id="contactMe">
 
 							<!-- <div class="clearfix"> -->
 							<div class="m_ipt my_name left">
 								<label for="my_name" class="lbl">Имя</label>
-								<input name="my_name" id="my_name" type="text" class="ipt ipt_contact" placeholder="Как к вам обращаться">
+								<input name="my_name" id="my_name" type="text" qtip-content="Вы не ввели имя!" class="ipt ipt_contact" placeholder="Как к вам обращаться">
 							</div>	
 
 							<div class="m_ipt my_email right">
 								<label for="my_email" class="lbl">Email</label>
-								<input name="my_email" id="my_email" type="text" class="ipt ipt_contact" placeholder="Куда мне писать">
+								<input name="my_email" id="my_email" type="text" qtip-content="Вы не ввели email!" qtip-position="right" class="ipt ipt_contact" placeholder="Куда мне писать">
 							</div>
 							<!-- </div> -->
 						
 							<div class="m_ipt message left">
 								<label for="" class="lbl">Сообщение</label>
-								<textarea name="my_message" id="my_message" class="txra txra_contact" placeholder="Кратко в чём суть"></textarea>
+								<textarea name="my_message" id="my_message" qtip-content="Опишите свой проект!" class="txra txra_contact" placeholder="Кратко в чём суть"></textarea>
 							</div>
 
 
 							<div class="m_ipt pikcha clearfix">
 								<label for="" class="lbl">Введите код, указанный на картинке</label>
 								<img src="img/code.jpg" alt="pikcha" class="img_code left">
-								<input type="text" class="ipt ipt_contact code right" placeholder="Введите код">
+								<input type="text" qtip-content="Вы не ввели код!" qtip-position="right" class="ipt ipt_contact code right" placeholder="Введите код">
 							</div>
 
 							<input type="submit" value="Отправить" class="btn btn_contact send left">
@@ -142,7 +143,12 @@
 		</div>
 	</footer>
 
-	<script src="bower/jquery/dist/jquery.js"></script>
-	<!--<script src="js/main.js"></script>-->
+	<script src="bower/jquery/jquery.js"></script> 									<!-- // jquery              -->
+	<script src="bower/placeholder.js/js/jquery.placeholder.js"></script>			<!-- // плагин placeholder  -->
+
+	<script src="bower/qtip2/jquery.qtip.js"></script>
+
+	<script src="js/validate.js"></script>
+	<script src="js/contact_me.js"></script>
 </body>
 </html>
