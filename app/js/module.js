@@ -73,7 +73,7 @@ var myModule = (function() {
 			dataType: 'json',
 			data: data,
 		}).fail(function(ans) {
-			form.find('.error-mes').text('На сервере произошла ошибка').show();
+			form.find('.error-mes').text('Ошибка! Невозможно добавить проект.').show();
 		});
 
 		return result;
