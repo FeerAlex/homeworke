@@ -1,0 +1,76 @@
+.header {
+  margin-block-end: 39px;
+  background-color: var(--color-surface);
+  background-image: var(--rule-gradient);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 3px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  inline-size: min(100% - 2 * var(--layout-gutter), var(--layout-header-width));
+  min-block-size: 119px;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  padding-block: var(--space-md);
+}
+
+/*
+ * Текстовый знак вместо картинки с чужим логотипом. Заодно ушёл приём
+ * «показать img, а текст спрятать в display: none» — теперь название
+ * доступно и поиску, и скринридерам.
+ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logoMark {
+  display: grid;
+  place-items: center;
+  inline-size: 42px;
+  block-size: 42px;
+  border-radius: var(--radius-lg);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logoText {
+  color: var(--color-accent);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-book);
+}
+
+.socialList {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/*
+ * Восемь правил с background-position (по два на каждую иконку — обычное
+ * состояние и наведение) свернулись в одно: координаты спрайта приходят
+ * из разметки кастомными свойствами.
+ */
+.socialLink {
+  display: block;
+  inline-size: 47px;
+  block-size: 47px;
+  border-radius: var(--radius-round);
+  background-image: url('../assets/img/spritesheet.png');
+  background-position: var(--sprite);
+  background-repeat: no-repeat;
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  background-position: var(--sprite-hover);
+}

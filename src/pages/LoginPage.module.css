@@ -1,0 +1,62 @@
+/*
+ * Раньше карточка центрировалась через position: absolute; top: 50%; left: 50%
+ * и отрицательные margin-ы под её точный размер. Достаточно грида.
+ */
+.screen {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: var(--space-xl) var(--layout-gutter);
+}
+
+.card {
+  inline-size: min(100%, 590px);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: clip;
+}
+
+.title {
+  padding-block: 15px;
+  border-block-end: 15px solid var(--color-accent-light);
+  background: var(--color-accent-bright);
+  color: var(--color-on-accent);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-book);
+  text-align: center;
+}
+
+.form {
+  --field-height: 60px;
+  --field-padding: 19px;
+  --field-font-size: var(--text-md);
+  --label-size: var(--text-4xl);
+  --label-weight: var(--weight-light);
+  --button-size: var(--text-4xl);
+  --button-height: 50px;
+
+  inline-size: min(100% - 2 * var(--space-lg), 422px);
+  margin-inline: auto;
+  padding-block: var(--space-md) 23px;
+  text-align: center;
+}
+
+.password {
+  margin-block-end: 23px;
+}
+
+.actions {
+  margin-block-start: var(--space-lg);
+}
+
+.submit {
+  padding-inline: 62px;
+}
+
+.hint {
+  margin-block-start: var(--space-md);
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-light);
+}
+

@@ -1,4 +1,7 @@
-app/bower
 node_modules
 dist
+.vite
+*.local
 .idea
+.DS_Store
+*.tsbuildinfo

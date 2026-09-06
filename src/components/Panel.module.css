@@ -1,0 +1,16 @@
+/* Светлая карточка-секция — бывший .about-box. */
+.panel {
+  margin-block-end: 26px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: clip;
+}
+
+.title {
+  display: inline-block;
+  padding: 12px 22px;
+  border-block-end: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-book);
+}

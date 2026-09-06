@@ -1,0 +1,111 @@
+/* Аватар и список фактов: было два float-блока по 228px и 422px. */
+.summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-lg) var(--space-xl);
+  padding: 35px 55px 41px;
+}
+
+.avatar {
+  inline-size: 140px;
+  block-size: 140px;
+  border: 5px solid var(--color-accent);
+  border-radius: var(--radius-round);
+  overflow: clip;
+}
+
+.avatar img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+/* Одна сетка на весь список: вопросы и ответы выстраиваются в две колонки. */
+.facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px var(--space-lg);
+  align-items: baseline;
+}
+
+.question {
+  color: var(--color-text);
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+}
+
+.answer {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-book);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  padding-inline: 13px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(var(--color-accent) 50%, var(--color-accent-dark) 50%);
+  color: var(--color-on-accent);
+  font-family: var(--font-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+/* Опыт и образование. */
+.entries {
+  display: grid;
+  gap: 21px;
+  padding: 21px 54px 38px;
+}
+
+.entry {
+  padding-inline-start: 70px;
+  background-image: var(--entry-icon);
+  background-position: 8px center;
+  background-repeat: no-repeat;
+  min-block-size: 34px;
+}
+
+.work {
+  --entry-icon: url('../assets/img/work.png');
+}
+
+.course {
+  --entry-icon: url('../assets/img/course.png');
+}
+
+.list {
+  --entry-icon: url('../assets/img/list.png');
+}
+
+.place {
+  font-size: var(--text-md);
+  font-weight: var(--weight-book);
+}
+
+.time {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-light);
+}
+
+@media (width < 34rem) {
+  .summary {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    padding-inline: var(--space-lg);
+  }
+
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .entries {
+    padding-inline: var(--space-lg);
+  }
+}

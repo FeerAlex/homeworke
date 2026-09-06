@@ -1,0 +1,103 @@
+/*
+ * Сетка карточек. Было: inline-block + фиксированные 183px + отдельное
+ * правило .project-item:nth-child(3n+1) для отступа слева.
+ * Стало: auto-fill, который сам решает, сколько колонок влезет.
+ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 30px;
+  padding: 21px 20px 39px;
+}
+
+.card {
+  text-align: center;
+}
+
+.thumb {
+  position: relative;
+  block-size: 125px;
+  margin-block-end: 6px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  overflow: clip;
+}
+
+.thumb img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(1 108 164 / 0.75);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.captionLink {
+  padding-inline: 4px;
+  border: 2px solid var(--color-surface);
+  border-radius: var(--radius-lg);
+  color: var(--color-surface);
+  font-size: 0.75rem;
+  font-weight: var(--weight-book);
+  scale: 0.25;
+  transition: scale var(--transition-base);
+}
+
+/* :focus-within — чтобы эффект открывался и с клавиатуры, не только мышью. */
+.thumb:hover .caption,
+.thumb:focus-within .caption {
+  opacity: 1;
+}
+
+.thumb:hover .captionLink,
+.thumb:focus-within .captionLink {
+  scale: 1;
+}
+
+.link {
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-style: italic;
+  font-weight: var(--weight-light);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.description {
+  margin-block-start: 4px;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-light);
+}
+
+/*
+ * Плитка «Добавить проект». Раньше текст опускался вниз через
+ * line-height: 178.8px при высоте блока 125px — теперь это обычный флекс.
+ */
+.addTile {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 125px;
+  padding-block-end: 26px;
+  border: 1px dashed var(--color-accent);
+  border-radius: var(--radius-lg);
+  background: url('../assets/img/project-img-add.png') center 34px no-repeat;
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-light);
+  transition: background-color var(--transition-fast);
+}
+
+.addTile:hover {
+  background-color: rgb(59 168 192 / 0.08);
+}

@@ -1,0 +1,92 @@
+/*
+ * Модальное окно на нативном <dialog> — вместо плагина bPopup (и jQuery под
+ * ним). Браузер сам даёт фокус-ловушку, закрытие по Esc, подложку и роль
+ * диалога для скринридеров.
+ */
+.dialog {
+  inline-size: min(362px, 100% - 2rem);
+  /* Сброс `* { margin: 0 }` затирает margin: auto, которым браузер
+     центрирует модальное окно, — возвращаем его явно. */
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-popup);
+  color: var(--color-text);
+  overflow: clip;
+
+  /* Плавное появление сверху — бывший transition: 'slideDown' у bPopup. */
+  opacity: 1;
+  translate: 0 0;
+  transition:
+    opacity var(--transition-base),
+    translate var(--transition-base),
+    overlay var(--transition-base) allow-discrete,
+    display var(--transition-base) allow-discrete;
+}
+
+.dialog:not([open]) {
+  opacity: 0;
+  translate: 0 -2rem;
+}
+
+@starting-style {
+  .dialog[open] {
+    opacity: 0;
+    translate: 0 -2rem;
+  }
+}
+
+.dialog::backdrop {
+  background: rgb(129 142 155 / 0.8);
+  opacity: 1;
+  transition:
+    opacity var(--transition-base),
+    overlay var(--transition-base) allow-discrete,
+    display var(--transition-base) allow-discrete;
+}
+
+.dialog:not([open])::backdrop {
+  opacity: 0;
+}
+
+@starting-style {
+  .dialog[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: 3px 11px 3px 13px;
+  border-block-end: 9px solid var(--color-accent-light);
+  background: var(--color-accent-bright);
+}
+
+.title {
+  color: var(--color-on-accent);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-regular);
+}
+
+.close {
+  flex-shrink: 0;
+  inline-size: 25px;
+  block-size: 25px;
+  border: none;
+  border-radius: var(--radius-round);
+  background: url('../assets/img/close.png') center / contain no-repeat;
+  transition: rotate var(--transition-fast);
+}
+
+.close:hover {
+  rotate: 90deg;
+}
+
+.body {
+  padding: var(--space-sm) 21px 21px;
+}

@@ -1,0 +1,99 @@
+/*
+ * Все цвета, размеры и тайминги старого CSS были вписаны в правила
+ * шестнадцатеричными литералами и повторялись десятки раз. Здесь они собраны
+ * в один набор кастомных свойств — палитра меняется в одном месте.
+ */
+
+:root {
+  /* Палитра: бирюзовый акцент проекта */
+  --color-accent: #3ba8c0;
+  --color-accent-dark: #2e8ca2;
+  --color-accent-bright: #48cbe8;
+  --color-accent-light: #67dffa;
+  --color-accent-hover: #44bfdb;
+  --color-accent-deep: #1e677b;
+
+  /* Поверхности и текст */
+  --color-page: #e7eff3;
+  --color-surface: #eff3f7;
+  --color-field: #fff;
+  --color-text: #4a545d;
+  --color-muted: #959aa8;
+  --color-on-accent: #fff;
+
+  /* Контакты в сайдбаре — три оттенка одной лесенки */
+  --color-contact-mail: #41b9d4;
+  --color-contact-tel: #48cbe8;
+  --color-contact-skype: #51daf8;
+
+  /* Статусы */
+  --color-danger: #f97e76;
+  --color-danger-bg: rgb(249 126 118 / 0.33);
+  --color-success: #49bb7b;
+  --color-success-bg: rgb(73 187 123 / 0.33);
+
+  /* Вторичная кнопка («Очистить») */
+  --color-neutral: #849db5;
+  --color-neutral-hover: #7b92a8;
+  --color-neutral-shadow: #687b8f;
+
+  /* Типографика */
+  --font-body: 'Fira Sans', system-ui, sans-serif;
+  --font-accent: 'Proxima Nova Condensed', 'Fira Sans', system-ui, sans-serif;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-book: 450;
+  --weight-medium: 500;
+
+  --text-xs: 0.8125rem;   /* 13px */
+  --text-sm: 0.9375rem;   /* 15px */
+  --text-md: 1.0625rem;   /* 17px */
+  --text-lg: 1.3125rem;   /* 21px */
+  --text-xl: 1.5625rem;   /* 25px */
+  --text-2xl: 1.6875rem;  /* 27px */
+  --text-3xl: clamp(1.75rem, 1.2rem + 2.4vw, 2.5rem);   /* 28→40px */
+  --text-4xl: clamp(1.5rem, 0.9rem + 2.6vw, 2.25rem);   /* 24→36px */
+
+  /* Отступы */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Скругления и тени */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-round: 50%;
+  --shadow-popup: 0 6px 12px 1px rgb(13 16 7 / 0.35);
+
+  /* Раскладка */
+  --layout-header-width: 75rem;   /* 1200px */
+  --layout-content-width: 60rem;  /* 960px */
+  --layout-sidebar-width: 15.625rem; /* 250px */
+  --layout-gutter: var(--space-lg);
+
+  /* Анимация */
+  --transition-fast: 0.2s linear;
+  --transition-base: 0.3s linear;
+
+  /* Полоска-градиент под шапкой и над подвалом */
+  --rule-gradient: linear-gradient(
+    90deg,
+    var(--color-page),
+    var(--color-accent-deep),
+    var(--color-page)
+  );
+}
+
+/* Уважаем системную настройку «меньше движения». */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0s;
+    --transition-base: 0s;
+  }
+}
