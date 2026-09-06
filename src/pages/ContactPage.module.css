@@ -1,0 +1,62 @@
+.banner {
+  margin-block-end: 42px;
+  padding: 39px 62px;
+  border-block-end: 17px solid var(--color-accent-light);
+  background: var(--color-accent-bright);
+  color: var(--color-on-accent);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-book);
+}
+
+/*
+ * Два поля в ряд — было .left / .right с float и ручными ширинами по 190px.
+ */
+.form {
+  --field-height: 39px;
+  --textarea-height: 176px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md) 23px;
+  inline-size: min(100% - 2 * var(--space-lg), 403px);
+  margin-inline: auto;
+  padding-block-end: 70px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.captchaRow {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.captchaImage {
+  flex-shrink: 0;
+  border: 1px solid var(--color-accent-bright);
+  border-radius: var(--radius-sm);
+  background: var(--color-field);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  grid-column: 1 / -1;
+}
+
+@media (width < 34rem) {
+  .form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .banner {
+    padding-inline: var(--space-lg);
+  }
+
+  .captchaRow {
+    flex-wrap: wrap;
+  }
+}

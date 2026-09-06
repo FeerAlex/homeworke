@@ -1,0 +1,21 @@
+/*
+ * Каркас страницы. Раньше сайдбар и контент разъезжались через float: left /
+ * float: right с фиксированными 250px и 650px, а под ними лежал .clearfix
+ * с zoom: 1 для IE6. Теперь это две колонки грида, которые на узком экране
+ * складываются в одну.
+ */
+.content {
+  display: grid;
+  grid-template-columns: var(--layout-sidebar-width) minmax(0, 1fr);
+  gap: 60px;
+  inline-size: min(100% - 2 * var(--layout-gutter), var(--layout-content-width));
+  margin-inline: auto;
+  margin-block-end: var(--space-md);
+}
+
+@media (width < 56rem) {
+  .content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-lg);
+  }
+}

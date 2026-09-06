@@ -1,0 +1,45 @@
+.field {
+  margin-block-end: var(--space-xs);
+}
+
+/*
+ * Подсказка об ошибке. Раньше её рисовал плагин qtip2 (вместе с jQuery — это
+ * ~90 КБ ради одного пузырька); сама вёрстка пузырька лежала в addproject.css
+ * закомментированной. Теперь это несколько строк CSS без единой зависимости.
+ *
+ * Подсказка идёт под полем и в общем потоке. Сбоку её ставить негде: самая
+ * широкая форма здесь — 422px внутри карточки 590px, и пузырёк просто не
+ * помещается в свободные поля. А в потоке он вдобавок не закрывает подпись
+ * следующего поля, когда пустых полей сразу несколько.
+ */
+.tooltip {
+  position: relative;
+  display: block;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  margin-block-start: 7px;
+  padding: 3px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--color-danger);
+  color: var(--color-on-accent);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-book);
+  line-height: 1.6;
+  animation: appear var(--transition-fast);
+}
+
+/* Уголок, указывающий на поле. */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  inset: auto auto 100% 14px;
+  border-inline: 5px solid transparent;
+  border-block-end: 7px solid var(--color-danger);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    translate: 0 -4px;
+  }
+}
